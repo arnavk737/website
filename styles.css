@@ -380,3 +380,69 @@ footer {
   color: #444;
   line-height: 1.6;
 }
+
+/* Mobile Navbar & Dropdown */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white; /* matches your navbar text */
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0047ab;
+    width: 200px;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Make hero padding smaller on mobile */
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Odyssey & other grids become fully responsive */
+  .odyssey-grid,
+  .why-join-container,
+  .contact-grid,
+  .leadership-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* Leadership grid specific: center cards on mobile */
+  .leadership-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+
+  /* Step section adjustments */
+  .steps {
+    padding: 0 1rem;
+  }
+}

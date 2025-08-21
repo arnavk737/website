@@ -9,8 +9,12 @@
 <body>
   <header>
     <nav class="navbar">
-      <img src="ootm.png" alt="OOTM" width = "425" height = "100">
+      <img src="ootm.png" alt="OOTM" width="425" height="100" class="logo">
+      <div class="menu-toggle" id="mobile-menu">
+        &#9776;
+      </div>
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="what-is-odyssey.html">What is Odyssey</a></li>
         <li><a href="how-to-register.html">How to Register</a></li>
         <li><a href="why-join.html">Why Join</a></li>
@@ -20,6 +24,7 @@
       </ul>
     </nav>
   </header>
+  
 
   <main class="hero">
     <h1>The premiere competition for creative and STEM-oriented minds</h1>
@@ -31,6 +36,14 @@
   <footer>
     <p>&copy; 2025-2026 DVHS Odyssey of the Mind Club</p>
   </footer>
-
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+  
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
 </body>
 </html>

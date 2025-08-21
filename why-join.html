@@ -9,7 +9,10 @@
 <body>
   <header>
     <nav class="navbar">
-      <img src="ootm.png" alt="OOTM" width="425" height="100">
+      <img src="ootm.png" alt="OOTM" width="425" height="100" class="logo">
+      <div class="menu-toggle" id="mobile-menu">
+        &#9776;
+      </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="what-is-odyssey.html">What is Odyssey</a></li>
@@ -21,6 +24,7 @@
       </ul>
     </nav>
   </header>
+  
 
   <main class="hero">
     <h1>Why Join Odyssey of the Mind?</h1>
@@ -56,6 +60,16 @@
   <footer>
     <p>&copy; 2025-2026 DVHS Odyssey of the Mind Club</p>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+  
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
 </body>
 </html>
 
